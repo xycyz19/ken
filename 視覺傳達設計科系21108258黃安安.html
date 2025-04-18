@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Craze</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #000;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+            nav a {
+                color: #ffc107;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 18px;
+                transition: color 0.3s;
+            }
+
+                nav a:hover {
+                    color: #fff;
+                }
+
+        header {
+            background: linear-gradient(45deg, #000, #444);
+            color: #ffc107;
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        }
+
+            header h1 {
+                font-family: 'Orbitron', sans-serif;
+                font-size: 3.5em;
+                margin: 0;
+                letter-spacing: 2px;
+                text-shadow: 3px 3px 8px #000;
+                border-bottom: 4px solid #ffc107;
+                display: inline-block;
+                padding-bottom: 10px;
+            }
+
+        .slideshow-container {
+            width: 60%;
+            margin: 30px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+            .slideshow-container img {
+                width: 100%;
+                display: none;
+            }
+
+        .active-slide {
+            display: block;
+        }
+
+        #about {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about-text {
+            background: #2b2b2b;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+            .about-text h3 {
+                font-family: 'Orbitron', sans-serif;
+                color: #ffc107;
+                font-size: 1.8em;
+                margin-bottom: 10px;
+            }
+
+        .about-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #ffc107;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+            .read-more:hover {
+                background-color: #ffdd57;
+            }
+
+        .mcLaren-info {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #000;
+            color: #ffc107;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>  <header id="home">
+        <h1>Welcome to Car Craze</h1>
+    </header>  <div class="slideshow-container">
+        <img class="slide active-slide" src="46877.jpg" alt="Car 1">
+        <img class="slide" src="46885.jpg" alt="Car 2">
+        <img class="slide" src="46884.jpg" alt="Car 3">
+    </div>  <section id="about">
+        <h2 style="font-family: 'Orbitron', sans-serif; color: #ffc107;">About Us</h2><div class="about-text">
+            <div class="about-image" style="background-image: url('46876.jpg');"></div>
+            <h3>McLaren 750S</h3>
+            <p>Experience the power and design of the McLaren 750S – a supercar legend.</p>
+            <button class="read-more" onclick="toggleInfo('info1')">Read More</button>
+            <div class="mcLaren-info" id="info1">
+                <p>The McLaren 750S is a track-focused beast that combines ultra-lightweight engineering with blistering performance. With a 4.0L twin-turbo V8 producing 740 horsepower and 800 Nm of torque, this car rockets from 0 to 100 km/h in just 2.8 seconds. It features aerodynamic enhancements like an active rear wing and carbon ceramic brakes. Inside, the cabin is tech-heavy with carbon fiber and Alcantara finishes, giving both performance and luxury in one.</p>
+            </div>
+        </div>
+
+        <div class="about-text">
+            <div class="about-image" style="background-image: url('46889.jpg');"></div>
+            <h3>Lamborghini Huracán Evo</h3>
+            <p>Feel the roar of the Huracán Evo – redefining performance and elegance.</p>
+            <button class="read-more" onclick="toggleInfo('info2')">Read More</button>
+            <div class="mcLaren-info" id="info2">
+                <p>The Lamborghini Huracán Evo features a 5.2-liter V10 engine with 640 horsepower. It goes from 0–100 km/h in 2.9 seconds. With advanced aerodynamics, a futuristic interior, and Lamborghini's predictive LDVI system, this supercar blends beauty, speed, and technology effortlessly.</p>
+            </div>
+        </div>
+
+        <div class="about-text">
+            <div class="about-image" style="background-image: url('46888.jpg');"></div>
+            <h3>Porsche 911 Turbo S</h3>
+            <p>Precision, heritage, and power – the Porsche 911 Turbo S is a true icon.</p>
+            <button class="read-more" onclick="toggleInfo('info3')">Read More</button>
+            <div class="mcLaren-info" id="info3">
+                <p>The Porsche 911 Turbo S delivers 640 hp from its 3.8L twin-turbo engine and hits 100 km/h in just 2.7 seconds. Its active aerodynamics, rear-axle steering, and luxurious high-tech cabin make it one of the best all-around performance cars on the road.</p>
+            </div>
+        </div>
+
+    </section>  <section id="contact">
+        <footer>
+            <p>Contact us at: info@carcraze.com</p>
+        </footer>
+    </section>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+        function showSlides() {
+            slides.forEach((slide) => (slide.style.display = "none"));
+            slideIndex++;
+            if (slideIndex > slides.length) slideIndex = 1;
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000);
+        }
+        showSlides();
+
+        function toggleInfo(id) {
+            const info = document.getElementById(id);
+            info.style.display = info.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
